@@ -1,0 +1,35 @@
+.amazing-start-container-mobile {
+  width: 100%;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.amazing-start-text-container-mobile {
+  width: calc(100vw - 60px);
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.amazing-start-title-mobile {
+  font-family: 'Suranna';
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.amazing-start-get-started-mobile {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 17px;
+  background: -webkit-linear-gradient(#9060dd, #a47be7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.amazing-start-figure-mobile {
+  width: 70vw;
+}

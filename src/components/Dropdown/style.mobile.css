@@ -1,0 +1,58 @@
+.dropdown-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+
+.dropdown-btn-mobile {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.options-list-container-mobile {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  background: #ffffff;
+  transform: translateY(60%) translateX(-45%);
+  padding: 25px 25px 15px 25px;
+  border-radius: 20px;
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  border: 1px solid white;
+}
+
+.options-list-container-mobile:before,
+.options-list-container-mobile:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border: 11px solid transparent;
+}
+
+.options-list-container-mobile:after {
+  left: 50%;
+  border: 10px solid transparent;
+  border-bottom-color: #ffffff;
+}
+
+.option-item-mobile {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.option-item-active-mobile {
+  color: #323ec6;
+}

@@ -1,0 +1,48 @@
+.amazing-start-container {
+  width: 100%;
+  height: calc(100vh - 130px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.amazing-start-bg {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+  height: calc(100vh);
+  background-color: #f7f7f8;
+}
+
+.amazing-start-figure {
+  width: 32.5vw;
+  height: 32.5vw;
+}
+
+.amazing-start-text-container {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.amazing-start-title {
+  font-family: 'Suranna';
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+.amazing-start-get-started {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 19px;
+  background: -webkit-linear-gradient(#9060dd, #a47be7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.amazing-start-text {
+  font-size: 16px;
+  line-height: 21px;
+  color: #090b2f;
+}

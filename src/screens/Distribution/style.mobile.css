@@ -1,0 +1,58 @@
+.ditribution-container-mobile {
+  max-width: 90vw;
+  padding: 2vw 5vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ditribution-title-mobile {
+  font-family: Suranna;
+  font-size: 10vw;
+  color: #090b2f;
+}
+
+.ditribution-grey-text-mobile {
+  font-family: Gilroy;
+  font-size: 4vw;
+  color: #878691;
+}
+
+.ditribution-blue-text-mobile {
+  color: #20246b;
+  font-size: 3vw;
+}
+
+.ditribution-price-block-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 37px rgba(175, 175, 175, 0.3);
+  margin: 40px 0;
+  border-radius: 20px;
+}
+
+.ditribution-progress-mobile {
+  width: 100%;
+  background-color: #dedee1;
+  height: 15px;
+  border-radius: 50px;
+  position: relative;
+  margin: 15px 0;
+}
+
+.ditribution-progress-fill-mobile {
+  width: 85%;
+  top: -15px;
+  position: absolute;
+  background: linear-gradient(270deg, #3742ff 0%, #a3a3fa 96.54%);
+}
+
+.ditribution-price-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}

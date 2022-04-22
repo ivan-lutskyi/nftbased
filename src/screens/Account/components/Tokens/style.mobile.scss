@@ -1,0 +1,188 @@
+@import 'styles/colors';
+
+.tokens-container-mobile {
+  background-color: white;
+  width: calc(100% - 70px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+}
+
+.tokens-title-container-mobile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tokens-title-text-mobile {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.tokens-values-container {
+  width: calc(100% - 20px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.tokens-count-mobile {
+  width: 100%;
+  background-color: #f6f7fb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tokens-count-icon {
+  width: 28px;
+  height: 28px;
+  margin: 12px;
+}
+
+.tokens-count-text-mobile {
+  font-size: 20px;
+}
+
+.tokens-in-dollars-mobile {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 20px;
+  background-color: #f6f7fb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tokens-in-dollars-text-mobile {
+  font-size: 20px;
+  margin-left: 22px;
+}
+
+.tokens-chart-container-mobile {
+  background: #f6f7fb;
+  border-radius: 10px;
+  width: calc(100% - 15px);
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.tokens-chart-currency-mobile {
+  width: calc(100% - 20px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.tokens-chart-currency-nft-mobile {
+  font-size: 14px;
+  color: $dark-purple;
+}
+
+.tokens-chart-currency-dollars-mobile {
+  font-size: 14px;
+}
+
+.tokens-chart-currency-changes-text-mobile {
+  font-size: 14px;
+  line-height: 24px;
+  color: #878691;
+}
+
+.tokens-chart-range-buttons-container-mobile {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.tokens-chart-range-button-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid #e8e9f1;
+  border-radius: 10px;
+  font-size: 14px;
+
+  margin-right: 5px;
+
+  transition: all 0.5s;
+
+  cursor: pointer;
+}
+
+.tokens-buttons-container-mobile {
+  width: calc(100% - 15px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.tokens-btn-mobile {
+  padding: 15px 18%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.tokens-btn-label {
+  font-size: 12px;
+  text-align: center;
+  color: #878691;
+}
+
+.tokens-btn-buy-mobile {
+  background-color: #323ec6;
+  color: white;
+  border: 1px solid transparent;
+
+  padding: 15px 0;
+
+  width: 50%;
+  flex: none;
+}
+
+.tokens-btn-buy-mobile:hover {
+  color: white;
+}
+
+.tokens-btn-sell-mobile {
+  background-color: #e8e9f1;
+  color: black;
+  border: 1px solid transparent;
+}
+
+.tokens-btn-trade-mobile {
+  background-color: #e8e9f1;
+  color: black;
+  border: 1px solid transparent;
+}
+
+.tokens-btn-container {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

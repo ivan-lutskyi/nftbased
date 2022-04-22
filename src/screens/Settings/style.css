@@ -1,0 +1,110 @@
+.settings-container {
+  width: calc(100% - 220px);
+  margin: 0 80px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.settings-particles {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  right: 0;
+  height: 100vh;
+  background-color: #080c2a;
+  overflow: auto;
+}
+
+.settings-fields-left {
+  border-radius: 20px;
+  margin-top: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.settings-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.settings-avatar {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 35px;
+  margin-top: 82px;
+}
+
+.settings-photo-container {
+  margin: 0 80px 0 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.settings-field-container {
+  display: flex;
+  width: 100%;
+}
+
+.settings-field-input {
+  width: 100%;
+}
+
+.settings-upload-btn {
+  outline: none;
+  border: 0;
+  background-color: #323ec6;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+.settings-leave-btn {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  padding: 18px;
+  color: #323ec6;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid #323ec6;
+  cursor: pointer;
+  text-align: center;
+}
+.settings-leave-btn:active {
+  opacity: 0.5;
+}
+
+.settings-countries-list {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 46px);
+  border-radius: 10px;
+  padding: 22px;
+  position: absolute;
+  z-index: 1;
+  background-color: #f6f6f6;
+  bottom: -230px;
+  border: 1px solid #dedee1;
+  max-height: 200px;
+}
+
+.settings-country-option {
+  cursor: pointer;
+  margin: 5px 0;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}

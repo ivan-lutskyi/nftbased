@@ -1,0 +1,90 @@
+@import 'styles/colors';
+
+.team-item-container {
+  display: flex;
+  width: 100%;
+  height: calc(60vh - 80px);
+  background-color: transparent;
+  border: 1px solid #aaabbb;
+  border-radius: 20px;
+  padding: 40px 0px 30px 0px;
+}
+
+.team-item-img-container {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-item-info {
+  width: 55%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.team-item-img {
+  width: 80% !important;
+}
+
+.team-item-name {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.team-item-title {
+  font-family: Suranna;
+  font-size: 2.5rem;
+}
+
+.team-item-description {
+  font-size: 1rem;
+  line-height: 21px;
+}
+
+.team-item-price {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.team-item-options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  align-items: flex-start;
+}
+
+.team-item-option-item {
+  font-size: 14px;
+  line-height: 16px;
+  color: #878691;
+  margin: 15px 0;
+}
+
+.team-item-option-item-icon {
+  width: 15px;
+  margin-right: 20px;
+}
+
+.team-item-select-btn {
+  padding: 15px 70px;
+  background-color: $light-purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.team-item-select-btn:active {
+  opacity: 0.5;
+}

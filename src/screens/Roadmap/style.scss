@@ -1,0 +1,152 @@
+@import 'styles/colors';
+
+.roadmap-container {
+  padding: 5vh 0;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 60vh;
+}
+
+.roadmap-title {
+  font-size: 48px;
+
+  line-height: 51, 59px;
+  font-family: Suranna;
+
+  margin-bottom: 5vh;
+}
+
+.roadmap-line {
+  width: calc(25vw - 2px);
+  border-right: 2px solid $dark-purple;
+}
+
+.roadmap-block {
+  width: 100%;
+}
+
+.roadmap-item {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.roadmap-section-title-container {
+  width: 14vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.road-map-item-title {
+  color: $dark-purple;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.roadmap-title-text {
+  font-size: 30px;
+  font-weight: 900;
+  color: $dark-purple;
+  text-transform: uppercase;
+  margin-right: 24px;
+}
+
+.roadmap-item-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid $dark-purple;
+  border-radius: 20px;
+  transform: translateX(calc(-45%));
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.last {
+  position: absolute !important;
+  top: 80%;
+}
+
+.roadmap-item-stick {
+  width: 0px;
+  height: 60%;
+  position: absolute;
+  border: 1px solid $dark-purple;
+}
+
+.dashed {
+  border: 1px dashed $dark-purple;
+}
+
+.road-map-block-title {
+  padding-top: 5px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.14em;
+
+  color: $dark-purple;
+}
+
+.road-map-item-description-container {
+  display: flex;
+  flex: 1;
+  width: 85%;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 24px;
+}
+
+.road-map-item-description-container p {
+  margin-top: 0;
+}
+
+.road-map-item-description {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  color: #090b2f;
+}
+
+.roadmap-item-invisible {
+  opacity: 0;
+}
+
+.scroll-animation {
+  animation-name: roadmapItemAppear;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes roadmapItemAppear {
+  from {
+    opacity: 0;
+    padding-top: 60px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    padding-top: 0px;
+  }
+}
+
+.roadmap-item-invisible {
+  padding-top: 60px;
+}

@@ -1,0 +1,2 @@
+export const USER_ID_KEY = 'USER_ID_KEY';
+export const REGISTRATION_STEP_KEY = 'REGISTRATION_STEP_KEY';

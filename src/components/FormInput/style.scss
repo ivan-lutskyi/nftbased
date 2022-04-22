@@ -1,0 +1,44 @@
+@import 'styles/colors';
+
+.field-container {
+  margin-bottom: 4.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.field-text {
+  font-weight: normal;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
+.field-label {
+  padding-bottom: 10px;
+}
+
+.field-input {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 22px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #dedee1;
+  border-radius: 10px;
+  outline: none;
+  display: flex;
+  background-color: #f6f6f6;
+}
+
+.field-input:focus {
+  border: 1px solid $light-purple;
+}
+
+.field-error-text {
+  position: absolute;
+  bottom: -35px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: red;
+}

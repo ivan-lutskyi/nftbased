@@ -1,0 +1,32 @@
+.home-token-sale-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #090b2f;
+
+  padding: 100px 0;
+}
+
+.home-token-sale-title {
+  color: #ffffff;
+  text-align: center;
+}
+
+.home-token-sale-figure {
+  width: 40vw;
+  background: radial-gradient(33.77% 46% at 46.47% 52.24%, #30007e 0%, rgba(9, 11, 47, 0.27) 100%),
+    #090b2f;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1600px) {
+  .home-token-sale-figure {
+    width: 60vw;
+    background: radial-gradient(33.77% 46% at 46.47% 52.24%, #30007e 0%, rgba(9, 11, 47, 0.27) 100%),
+      #090b2f;
+    margin-bottom: 20px;
+  }
+}

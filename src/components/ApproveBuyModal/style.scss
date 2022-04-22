@@ -1,0 +1,93 @@
+.approval-done-img {
+  width: 140px;
+  height: 140px;
+}
+
+.approval-subtitle-mobile {
+  margin-top: 0;
+}
+
+.login-form-mobile div {
+  margin-bottom: 20px;
+}
+
+.login-form {
+  margin-top: 30px
+}
+
+@media (max-width: 1600px) {
+  .approval-done-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .approval-container {
+    padding: 5px;
+  }
+}
+
+@media (max-height: 800px) {
+  .approval-title {
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .approval-done-img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+@media (max-height: 600px) {
+  .approval-container {
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .approval-container {
+    max-width: 25vw;
+  }
+  .approval-done-img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .approval-title,
+  .approval-subtitle,
+  .approval-buttons-container button span {
+    margin: 5px;
+  }
+
+  .third-register-payment-done {
+    padding: 10px 0px 10px 0px;
+  }
+
+  .approval-container {
+    padding: 5px;
+  }
+
+  .login-form-mobile div {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-height: 630px) {
+  .approval-container {
+    width: 40vw !important;
+    padding: 20px 25px!important;
+
+    .login-form {
+      margin-top: 0 !important;
+    }
+  }
+
+}
+
+@media (max-height: 550px) {
+  .approval-done-img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+}

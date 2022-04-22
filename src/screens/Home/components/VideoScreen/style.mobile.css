@@ -1,0 +1,78 @@
+.home-video-container-mobile {
+  width: 100vw;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+
+  position: relative;
+  background-image: url(./img/ezgifMobile.png);
+
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-video-container-mobile {
+  width: 100%;
+  height: 100%;
+}
+
+.home-video-title-mobile {
+  width: 80%;
+
+  font-size: 36px;
+  color: white;
+  font-family: 'Suranna';
+
+  position: absolute;
+
+  top: 10%;
+  left: 10%;
+
+  z-index: 5;
+  filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
+}
+
+.lefted-mobile {
+  left: -400%;
+}
+
+.home-video-start-mobile {
+  color: white;
+  font-family: 'Suranna';
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  transition: all 0.6s ease-in;
+
+  cursor: pointer;
+
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
+}
+
+.home-video-start-mobile:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in;
+
+  color: #fff;
+}
+
+.home-video-start-mobile {
+  transition: all 0.2s ease-in;
+}

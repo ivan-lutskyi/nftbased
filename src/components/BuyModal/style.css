@@ -1,0 +1,82 @@
+.buyModal-container-mobile {
+  top: 12vh;
+}
+@media (max-width: 900px) and (max-height: 750px) {
+  .buyModal-title {
+    font-size: 1rem;
+  }
+  .buyModal-subtitle div,
+  .buyModal-subtitle span {
+    font-size: 1rem ;
+  }
+
+  .wallet-address-text-container span {
+    font-size: 1rem;
+  }
+
+  .wallet-address-text-container {
+    padding: 5px 0;
+  }
+
+  .buyModal-subtitle {
+    padding: 5px 0;
+    margin: 5px auto;
+  }
+
+  .buyModal-container {
+    padding: 20px;
+    margin: auto 0 auto 0; 
+  }
+}
+
+@media (max-width: 330px) {
+  .buyModal-container-mobile {
+    top: 12vh;
+  }
+}
+
+@media (max-height: 850px) {
+  .buyModal-subtitle div,
+  .buyModal-subtitle span {
+    font-size: 1rem ;
+  }
+
+  .buyModal-container {
+    margin-bottom: 10%;
+  }
+  
+  .buyModal-qrcode canvas {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+
+  .buyModal-qrcode {
+    height: 100px;
+    margin: 15px auto !important;
+  }
+
+  .approval-container .login-form .third-register-payment-done {
+    margin-top: 20px !important;
+  }
+}
+
+
+@media (max-height: 610px) {
+  .buyModal-container {
+    padding: 15px 25px !important;
+  }
+
+  .buyModal-subtitle:nth-child(2n) {
+    margin: 0 !important;
+    padding: 10px 0!important
+  }
+
+  .buyModal-title-container {
+    margin-bottom: 0 !important;
+  }
+
+  .buyModal-qrcode {
+    margin: 10px 0 !important;
+  }
+}

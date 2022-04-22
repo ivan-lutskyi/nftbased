@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^nftbased\.io$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.nftbased\.io$
+RewriteRule .* https://www.nftbased.io%{REQUEST_URI} [R=301,L]

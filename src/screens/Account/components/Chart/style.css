@@ -1,0 +1,7 @@
+.apexcharts-toolbar {
+    right: 0 !important;
+}
+
+.apexcharts-zoom-icon, .apexcharts-pan-icon {
+    display: none;
+}

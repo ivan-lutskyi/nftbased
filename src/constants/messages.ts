@@ -1,0 +1,10 @@
+export const REQUIRED_FIELD_MESSAGE = 'This field is required';
+export const SERVER_ERROR_MESSAGE = 'Server error';
+export const INCORRECT_DATA_MESSAGE = 'Incorrect data';
+export const SUCCESSFUL_SUBSCTIPTION_MESSAGE = 'Your email was successfully subscribed';
+export const EMAIL_ALREADY_REGISTERED_MESSAGE = 'Such email is already registered';
+export const getMinLengthMessage = (value: string, minLength: number) => `${value} is too short`;
+export const getMaxLengthMessage = (value: string, maxLength: number) => `${value} is too long`;
+export const INVALID_EMAIL = 'Invalid email address';
+export const DONE_OPERATION_MESSAGE = 'Done!';
+export const LOGIN_AGAIN_MESSAGE = 'Try to login again';

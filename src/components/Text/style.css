@@ -1,0 +1,67 @@
+.h-text {
+  width: fit-content;
+}
+
+/* Min font size */
+.h1-text {
+  font-size: 36px !important;
+}
+.h2-text {
+  font-size: 24px !important;
+}
+.h3-text {
+  font-size: 18px !important;
+}
+.h4-text {
+  font-size: 14px !important;
+}
+.h5-text {
+  font-size: 12px !important;
+}
+.h6-text {
+  font-size: 10px !important;
+}
+
+/* Fluid typography formula */
+@media (min-width: 640px) and (max-width: 1600px) {
+  .h1-text {
+    font-size: calc(36px + (48 - 36) * (100vw - 640px) / (1600 - 640)) !important;
+  }
+  .h2-text {
+    font-size: calc(24px + (36 - 24) * (100vw - 640px) / (1600 - 640)) !important;
+  }
+  .h3-text {
+    font-size: calc(18px + (24 - 18) * (100vw - 640px) / (1600 - 640)) !important;
+  }
+  .h4-text {
+    font-size: calc(14px + (18 - 14) * (100vw - 640px) / (1600 - 640)) !important;
+  }
+  .h5-text {
+    font-size: calc(12px + (14 - 12) * (100vw - 640px) / (1600 - 640)) !important;
+  }
+  .h6-text {
+    font-size: calc(10px + (12 - 10) * (100vw - 640px) / (1600 - 640)) !important;
+  }
+}
+
+/* Max font size */
+@media (min-width: 1600px) {
+  .h1-text {
+    font-size: 48px !important;
+  }
+  .h2-text {
+    font-size: 36px !important;
+  }
+  .h3-text {
+    font-size: 24px !important;
+  }
+  .h4-text {
+    font-size: 18px !important;
+  }
+  .h5-text {
+    font-size: 14px !important;
+  }
+  .h6-text {
+    font-size: 12px !important;
+  }
+}

@@ -1,0 +1,67 @@
+.ditribution-container {
+  width: 85vw;
+  padding: 7.5vw;
+}
+
+.ditribution-title {
+  font-family: Suranna;
+  font-size: 48px;
+  line-height: 52px;
+  color: #090b2f;
+}
+
+.ditribution-grey-text {
+  font-family: Gilroy;
+  font-size: 24px;
+  color: #878691;
+}
+
+.jc-between_ai-center {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ditribution-blue-text {
+  color: #20246b;
+  font-size: 24px;
+}
+
+.range-subtititle-container {
+  margin-top: 70px;
+}
+
+.ditribution-progress {
+  width: 100%;
+  background-color: #dedee1;
+  height: 30px;
+  border-radius: 50px;
+  position: relative;
+  margin: 15px 0;
+}
+
+.ditribution-progress-fill {
+  width: 85%;
+  top: -15px;
+  position: absolute;
+  background: linear-gradient(270deg, #3742ff 0%, #a3a3fa 96.54%);
+}
+
+.ditribution-price-block {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 30px 40px;
+  box-shadow: 0px 0px 37px rgba(175, 175, 175, 0.3);
+  margin-top: 60px;
+  border-radius: 20px;
+}
+
+.ditribution-price-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

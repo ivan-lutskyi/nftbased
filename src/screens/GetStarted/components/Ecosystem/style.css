@@ -1,0 +1,35 @@
+.ecosystem-container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecosystem-text-block {
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+}
+
+.ecosystem-title {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.ecosystem-slogan {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 30px;
+  background: -webkit-linear-gradient(#9060dd, #a47be7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ecosystem-description {
+  color: white;
+  text-align: left;
+}

@@ -1,0 +1,138 @@
+@import 'styles/colors';
+
+.home-lead-screen-container-mobile {
+  width: calc(100vw - 60px);
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 30px 0px 30px;
+}
+
+.home-lead-screen-figure-mobile {
+  width: 30vh;
+  z-index: 1;
+}
+
+.home-lead-screen-text-container-mobile {
+  display: flex;
+  flex-direction: column;
+  height: calc(50vh - 65px);
+}
+
+.home-lead-screen-title-mobile {
+  font-family: 'Suranna';
+  font-size: 36px;
+  margin-bottom: 1.5vh;
+  margin-top: 10vh;
+}
+
+.home-lead-screen-subtitle-mobile {
+  font-family: Gilroy;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21.4px;
+  margin-bottom: 1vh;
+  background: #090b2f;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-lead-screen-text-mobile {
+  font-size: 2vh;
+  color: #090b2f;
+}
+
+.home-lead-screen-figure-container-mobile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 20%;
+}
+
+#home-background-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background-color: #090b2f;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@media (max-width: 375px) {
+  #home-background-mobile {
+    height: 20%;
+  }
+
+  .home-lead-screen-figure-mobile {
+    width: 25vh;
+  }
+
+  .home-lead-screen-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 30px 0px 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  .home-lead-screen-text-container-mobile {
+    margin-bottom: 90px;
+  }
+
+  #home-background-mobile {
+    height: 20%;
+    bottom: -10px;
+  }
+
+  .home-lead-screen-figure-mobile {
+    width: 25vh;
+  }
+
+  .home-lead-screen-title-mobile {
+    margin-top: 3vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .home-lead-screen-text-container-mobile {
+    margin-bottom: 90px;
+  }
+
+  #home-background-mobile {
+    height: 20%;
+    bottom: -30px;
+  }
+
+  .home-lead-screen-figure-mobile {
+    width: 25vh;
+  }
+}
+
+.home-get_started-btn-mobile {
+  background-color: $light-purple;
+  color: white;
+  padding: 11px 35px;
+  cursor: 'pointer';
+  border: 'none';
+  outline: 'none';
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 24px;
+  justify-content: center;
+  font-size: 2vh;
+}
+
+.home-get_started-btn-arrow-mobile {
+  margin-left: 10px;
+  margin-top: 2px;
+}

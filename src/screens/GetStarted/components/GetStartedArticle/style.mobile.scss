@@ -1,0 +1,30 @@
+@import 'styles/colors';
+
+.get-started-article-container-mobile {
+  width: 100%;
+  flex: 1;
+  min-height: 100vh;
+  max-height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-started-article-text-block-mobile {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.get-started-article-title-mobile {
+  font-size: 36px;
+  color: #090b2f;
+  border-bottom: 1px solid $light-purple;
+  font-family: 'Suranna';
+}
+
+.get-started-article-text-mobile {
+  line-height: 20px;
+}

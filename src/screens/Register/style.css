@@ -1,0 +1,149 @@
+.register-container {
+  width: 100%;
+  /* height: calc(100vh - 135px); */
+
+  margin-bottom: 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-particles {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 50vw;
+  right: 0;
+  height: 100vh;
+  background-color: #080c2a;
+  overflow: auto;
+}
+
+.register-block {
+  width: 60%;
+  padding: 30px 30px 0 30px;
+  background-color: white;
+  border: 1px solid rgba(8, 12, 42, 0.5);
+
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.register-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 26px;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-fields-left {
+  margin-right: 30px;
+  width: 50%;
+}
+
+.register-btn {
+  background-color: #323ec6;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.register-btn:active {
+  opacity: 0.5;
+}
+
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.goto-login-btn {
+  background-color: white;
+  color: #323ec6;
+  border: 1px solid #323ec6;
+  text-align: center;
+  cursor: pointer;
+}
+
+.goto-login-btn:active {
+  opacity: 0.5;
+}
+
+.field-container {
+  position: relative;
+}
+
+.field-input-dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 15px;
+  background-color: #f6f6f6;
+}
+
+.field-input-dropdown-text {
+  font-weight: normal;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+}
+
+.countries-list {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 45px);
+  border-radius: 10px;
+  padding: 21px;
+  position: absolute;
+  z-index: 1;
+  background-color: #f6f6f6;
+  bottom: -230px;
+  border: 1px solid #dedee1;
+  max-height: 200px;
+  padding-top: 0px;
+}
+
+.country-option {
+  cursor: pointer;
+  margin: 5px 0;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}

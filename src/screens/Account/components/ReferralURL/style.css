@@ -1,0 +1,70 @@
+.referral-URL-container {
+  margin: 0 80px 0 30px;
+  flex: 1;
+  position: relative;
+  background-color: white;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin-right: 80px;
+}
+
+.referral-URL-coming_soon {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.referral-URL-coming_soon-text {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.referral-URL-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.referral-URL-text-container {
+  background: #f6f6f6;
+  border: 1px solid #dedee1;
+  border-radius: 10px;
+  padding: 17px 22px 17px 0;
+  margin-left: 30px;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 53px - 30px);
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.referral-URL-text {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 30px;
+  color: #090b2f;
+}
+
+.referral-URL-copy-btn {
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.referral-URL-text-container:active {
+  opacity: 0.4;
+}

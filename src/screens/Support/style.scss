@@ -1,0 +1,262 @@
+@import 'styles/colors';
+
+.support-container {
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.support-title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: Suranna;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #dedee1;
+
+  position: relative;
+  user-select: none;
+}
+
+.support-title::after {
+  position: absolute;
+  content: '';
+  transform: rotate(90deg) translateX(28px) translateY(-80px);
+  height: 160px;
+  width: 1px;
+
+  background: $dark-purple;
+}
+
+.support-forms {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  gap: 40px;
+
+  margin-top: 25px;
+
+  .field-text {
+    color: #dedee1;
+  }
+
+  .input-container-title, .field-text {
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #dedee1;
+    margin-right: 30px;
+  }
+}
+
+.support-input-container {
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin: 0;
+}
+
+.support-input-container:nth-child(4) {
+  gap: 20px;
+} 
+
+.field-label {
+  font-weight: bold;
+}
+
+.support-input-container input {
+  width: 95%;
+  background: transparent;
+  border: 1px solid #878691;
+  border-radius: 10px;
+
+  color: #dedee1;
+  outline: none;
+
+  min-height: 40px;
+  max-height: 60px;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer !important;
+}
+
+.support-input-container input:focus,
+.support-text-area:focus,
+.text-area:focus,
+.custom-checkbox-container:hover .checkmark {
+  border: 1px solid $dark-purple;
+  transition: all 0.3s ease;
+}
+
+.support-input-container:nth-child(4) {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.support-input-container:nth-child(4) .input-container-title, .support-input-container:nth-child(4) .field-text  {
+  padding-bottom: 7px;
+}
+
+.custom-checkbox-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  height: 32px;
+  width: 32px;
+
+  overflow: hidden;
+}
+
+.custom-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 32px !important;
+  width: 32px !important;
+
+  min-height: 0 !important;
+  z-index: 5;
+}
+
+.stick-one,
+.stick-two {
+  position: absolute;
+  bottom: -25px;
+
+  height: 90%;
+  width: 1px;
+
+  background: #dedee1;
+
+  opacity: 0;
+}
+.stick-one {
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.stick-two {
+  transform: rotate(-45deg);
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+.active-stick-one {
+  transform: rotate(45deg) translateY(-30px) translateX(-8px);
+  transition: all 0.3s ease;
+  transition: opacity 0.1 ease;
+  opacity: 0.8;
+}
+
+.active-stick-two {
+  transform: rotate(-45deg) translateY(-30px) translateX(8px);
+  transition: all 0.3s ease;
+  transition: opacity 0.1 ease;
+  opacity: 0.8;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  border: 1px solid #878691;
+  border-radius: 10px;
+}
+
+.support-text-area-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.text-area {
+  background: transparent;
+  color: #dedee1;
+  border: 1px solid #878691;
+  border-radius: 10px;
+
+  padding: 10px;
+  outline: none;
+
+  max-height: 200px;
+  min-height: 100px;
+  resize: none;
+
+  transition: all 0.3s ease;
+  cursor: pointer !important;
+}
+
+.support-button-container {
+  text-decoration: none;
+  background: #6924D9;
+  border-radius: 5px;
+  max-width: 100px;
+  height: 25px;
+  border: 0;
+
+  padding: 15px 50px;
+}
+
+.support-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+
+  gap: 20px;
+}
+
+.support-footer span,
+.support-footer span a {
+  font-size: 14px;
+
+  color: #dedee1;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.support-footer a svg {
+  height: 100% !important;
+  width: 16px;
+}

@@ -1,0 +1,68 @@
+.wallet-address-container-mobile {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  width: calc(100vw - 70px);
+  margin: 25px 0;
+}
+
+.wallet-address-title-mobile {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.wallet-address-text-container-mobile {
+  background: #f6f6f6;
+  border: 1px solid #dedee1;
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.wallet-address-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.wallet-address-header-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wallet-address-text-mobile {
+  font-size: 3vw;
+  color: #090b2f;
+}
+
+.wallet-address-copy-btn-mobile {
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #dedee1;
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.wallet-address-text-container-mobile:active {
+  opacity: 0.4;
+}

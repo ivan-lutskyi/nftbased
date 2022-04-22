@@ -1,0 +1,137 @@
+@import 'styles/colors';
+
+.team-item-container-mobile {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 0 10px 0px 10px;
+  width: 40%;
+  margin-bottom: 20px;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.team-item-info-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.team-item-img-mobile {
+  width: 180px !important;
+}
+
+.team-item-name-mobile {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.team-item-title-mobile {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.team-item-description-mobile {
+  font-size: 14px;
+}
+
+.team-item-price-mobile {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.team-item-options-list-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  align-items: flex-start;
+}
+
+.team-item-option-item-mobile {
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+  font-size: 14px;
+  color: #878691;
+}
+
+.team-item-option-item-icon {
+  width: 15px;
+  margin-right: 20px;
+}
+
+.team-item-select-btn-mobile {
+  width: 100%;
+  padding: 15px 0;
+  background-color: $light-purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.team-item-select-btn-mobile:active {
+  opacity: 0.5;
+}
+
+@media (max-device-height: 600px) {
+  .team-item-container-mobile {
+    display: flex;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 15px;
+    flex: none;
+
+    width: 40%;
+  }
+
+  .team-item-img-mobile {
+    width: 120px !important;
+  }
+
+  .team-item-title-mobile {
+    font-family: Suranna;
+    font-size: 32px;
+  }
+
+  .team-item-description-mobile {
+    font-size: 12px;
+  }
+
+  .team-item-option-item-mobile {
+    font-size: 12px;
+    color: #878691;
+    margin: 8px 0;
+  }
+
+  .team-item-price-mobile {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .team-item-select-btn-mobile {
+    width: 100%;
+    padding: 10px 0;
+    background-color: $light-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+}

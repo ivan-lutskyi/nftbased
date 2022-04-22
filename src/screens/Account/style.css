@@ -1,0 +1,228 @@
+.account-container {
+  justify-content: space-around;
+  padding-top: 0 !important;
+}
+
+.account-particles {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  right: 0;
+  height: 100vh;
+  background-color: #080c2a;
+  overflow: auto;
+}
+
+.apexcharts-toolbar {
+  z-index: 0;
+}
+
+.account-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.account-bg-particles {
+  width: 100%;
+  z-index: -1;
+  top: 0;
+}
+
+.account-footer-wallet-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vw;
+  margin-left: 80px;
+}
+
+@media (max-width: 1600px) {
+
+  .tokens-container div a, .tokens-container div span {
+    font-size: 0.8em;
+  }
+
+  .tokens-container button,
+  .wallet-address-text-container {
+    font-size: 0.6em;
+  }
+
+  .tokens-chart-range-button {
+    width: 1vw;
+    height: 1vw;
+    padding: 4px;
+  }
+
+  .account-footer-wallet-container {
+    height: 130px;
+  }
+
+  .qr-wallet-container,
+  .referral-URL-container {
+    height: 130px;
+    width: 130px;
+
+    padding-top: 0px;
+  }
+
+  .wallet-address-copy-btn {
+    margin-right: 15px;
+  }
+
+  .qr-wallet-container canvas {
+    height: 80px !important;
+    width: 80px !important;
+    margin-top: 10px;
+  }
+
+  .qr-wallet-container span {
+    font-size: 0.8vw;
+  }
+}
+
+@media (max-width: 1600px) and (max-height: 650px) {
+  .tokens-container span,
+  .wallet-address-container span {
+    font-size: 0.6vw;
+  }
+
+  .tokens-container div a {
+    font-size: 0.4vw;
+  }
+
+  .tokens-container button,
+  .wallet-address-text-container {
+    font-size: 0.4vw;
+  }
+
+  .tokens-values-container {
+    height: 30px;
+  }
+
+  .tokens-chart-range-button {
+    width: 1vw;
+    height: 1vw;
+    padding: 4px;
+  }
+
+  .account-footer-wallet-container {
+    height: 100px;
+  }
+
+  .qr-wallet-container,
+  .referral-URL-container {
+    height: 100px;
+    width: 100px;
+
+    padding-top: 0px;
+  }
+
+  .wallet-address-copy-btn {
+    margin-right: 15px;
+  }
+
+  .qr-wallet-container canvas {
+    height: 50px !important;
+    width: 50px !important;
+    margin-top: 10px;
+  }
+
+  .qr-wallet-container span {
+    font-size: 0.6vw;
+  }
+
+  .apexcharts-canvas {
+    height: 100px !important;
+    width: 80px !important;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 400px) {
+  .tokens-container span,
+  .wallet-address-container span {
+    font-size: 0.4vw;
+  }
+
+  .tokens-container div a {
+    font-size: 0.3vw;
+  }
+
+  .tokens-container button,
+  .wallet-address-text-container {
+    font-size: 0.3vw;
+  }
+
+  .tokens-values-container {
+    height: 30px;
+  }
+
+  .tokens-chart-range-button {
+    width: 1vw;
+    height: 1vw;
+    padding: 4px;
+  }
+
+  .account-footer-wallet-container {
+    height: 80px;
+  }
+
+  .qr-wallet-container,
+  .referral-URL-container {
+    height: 80px;
+    width: 80px;
+
+    padding-top: 0px;
+  }
+
+  .wallet-address-copy-btn {
+    margin-right: 15px;
+  }
+
+  .qr-wallet-container canvas {
+    height: 40px !important;
+    width: 40px !important;
+    margin-top: 10px;
+  }
+
+  .qr-wallet-container span {
+    font-size: 0.6vw;
+  }
+
+  .apexcharts-yaxis-texts-g text {
+    font-size: 0.5vw;
+  }
+
+  .apexcharts-xaxis-texts-g text {
+    font-size: 0.5vw;
+  }
+
+  .apexcharts-svg {
+    height: 120px !important;
+  }
+
+  .apexcharts-toolbar {
+    display: none;
+    z-index: 1 !important;
+  }
+
+  .tokens-chart-currency {
+    height: 10px;
+  }
+
+  .chart > div {
+    height: 100px;
+    max-height: 100px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .apexcharts-toolbar {
+    display: none;
+    z-index: 1 !important;
+  }
+}

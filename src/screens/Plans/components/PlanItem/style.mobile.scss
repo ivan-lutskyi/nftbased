@@ -1,0 +1,226 @@
+@import 'styles/colors';
+
+.plan-item-container-mobile {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: 1px solid #aaabbb;
+  border-radius: 20px;
+  padding: 0 20px 20px 20px;
+  margin-left: 15px;
+  flex: 1;
+  margin-bottom: 20px;
+
+  position: relative;
+}
+
+.plan-item-info-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.plan-item-img-mobile {
+  width: 180px !important;
+}
+
+.plan-item-container-mobile:nth-child(3) {
+  border: 3px solid $light-purple;
+}
+
+.plan-item-container-mobile:nth-child(3)::before {
+  transform: scale(0.8);
+  position: absolute;
+  top: -10px;
+  left: 50px;
+  content: url('../../img/bookmark-icon.svg');
+}
+
+.plan-item-name-mobile {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.plan-item-title-mobile {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.plan-item-description-mobile {
+  font-size: 14px;
+}
+
+.plan-item-price-mobile {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.plan-item-options-list-mobile {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.plan-item-option-item-mobile {
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+  font-size: 14px;
+  color: #878691;
+}
+
+.plan-item-option-item-icon {
+  width: 15px;
+  margin-right: 20px;
+}
+
+.plan-item-select-btn-mobile {
+  width: 100%;
+  padding: 15px 0;
+  background-color: $light-purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.plan-item-select-btn-mobile:active {
+  opacity: 0.5;
+}
+
+.plans-list .plan-item-container-mobile div a {
+  width: 80%;
+}
+
+.plans-list .plan-item-container-mobile div a button {
+  width: 80% !important;
+}
+
+@media only screen and (min-device-height: 500px) and (max-device-height: 800px) {
+  .plan-item-container-mobile {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid #aaabbb;
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 15px;
+    flex: 1;
+  }
+
+  .plan-item-img-mobile {
+    width: 120px !important;
+  }
+
+  .plan-item-description-mobile {
+    font-size: 14px;
+  }
+
+  .plan-item-option-item-mobile {
+    font-size: 14px;
+    color: #878691;
+    margin: 8px 0;
+  }
+
+  .plan-item-price-mobile {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .plan-item-select-btn-mobile {
+    width: 100%;
+    padding: 10px 0;
+    background-color: $light-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1000px) {
+  .plan-item-container-mobile:nth-child(3)::before {
+    transform: scale(0.8);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    content: url('../../img/bookmark-icon.svg');
+  }
+}
+
+@media (max-width: 800px) {
+  .plan-item-options-list-mobile {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .plan-item-option-item-mobile {
+    margin: 5px 0;
+  }
+
+  .plan-item-container-mobile {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .plan-item-container-mobile {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid #aaabbb;
+    border-radius: 20px;
+    margin-left: 15px;
+    flex: none;
+
+    height: 130px;
+  }
+
+  .plan-item-title-mobile {
+    font-size: 16px;
+  }
+
+  .plan-item-options-list-mobile {
+    flex: none;
+    height: 60px;
+  }
+
+  .plan-item-options-list-mobile > li {
+    margin: 0;
+  }
+
+  .plan-item-container-mobile > div:first-child {
+    padding-top: 5px !important;
+
+    flex: none !important;
+  }
+
+  .plan-item-container-mobile > div:last-child {
+    padding-top: 5px !important;
+
+    flex: none !important;
+
+    height: 30px !important;
+  }
+
+  .plan-item-options-list-mobile {
+    margin: 0;
+  }
+}

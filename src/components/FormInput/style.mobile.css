@@ -1,0 +1,40 @@
+.field-container-mobile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+
+  min-height: 88px;
+}
+
+.field-text-mobile {
+  font-weight: normal;
+  font-size: 14px;
+  color: #2b2b2b;
+}
+
+.field-label-mobile {
+  padding-bottom: 5px;
+}
+
+.field-input-mobile {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 22px;
+  box-sizing: border-box;
+  border: 1px solid #dedee1;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f6f6f6;
+  width: 100%;
+}
+
+.field-error-text-mobile {
+  position: absolute;
+  bottom: -30px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: red;
+}

@@ -1,0 +1,3 @@
+export const CHANGE_LANGUGAGE = 'CHANGE_LANGUGAGE';
+export const SET_DEVICE_TYPE = 'SET_DEVICE_TYPE';
+export const SET_IS_LOADING = 'SET_IS_LOADING';

@@ -1,0 +1,136 @@
+@import 'styles/colors';
+
+.plans-container-mobile {
+  padding: 40px 20px 0 20px;
+  position: relative;
+}
+@media only screen and (min-width: 320px) and (max-width: 700px) {
+  .plans-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 40px 20px 0 20px;
+
+    position: relative;
+  }
+
+  .plans-title-container-mobile {
+    padding: 0 25px;
+    margin-bottom: 25px;
+  }
+
+  .plans-title-mobile {
+    border-bottom: 1px solid $light-purple;
+
+    font-family: Suranna;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .plans-title-description-mobile {
+    font-size: 12px;
+    margin-top: 50px;
+    line-height: 21px;
+  }
+
+  .carousel__container {
+    margin: auto;
+  }
+
+  .carousel__slider {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .carousel__inner-slide {
+    width: calc(100% - 10%);
+    display: flex;
+    padding-bottom: 0 !important;
+  }
+
+  .plans-carousel-mobile {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .plans-carousel-controls {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .plans-carousel-controls-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #aaabbb;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    background-color: transparent;
+  }
+
+  .plans-carousel-controls-btn-right {
+    margin-left: 25px;
+    transform: rotate(180deg);
+  }
+
+  .carousel__dot-group {
+    display: flex;
+  }
+
+  .carousel__dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    border: 1px solid #aaabbb;
+    outline: none;
+    margin: 5px;
+    background-color: transparent;
+  }
+
+  .carousel__dot--selected {
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid #aaabbb;
+    background-color: $light-purple;
+    border: 0;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 700px) {
+    .plans-carousel-controls {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .plans-carousel-controls-btn {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #aaabbb;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+    }
+
+    .plans-carousel-controls-btn-right {
+      margin-left: 25px;
+      transform: rotate(180deg);
+    }
+  }
+}
