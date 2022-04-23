@@ -4,7 +4,7 @@ import { ReactComponent as DoneIcon } from '../../img/done-icon.svg';
 import './style.css';
 
 const yourReferralId = 'j1l3h1lj3nedj';
-const referralURL = `https://nftbased.io/register/${yourReferralId}`;
+const referralURL = `https://nftbased.net/register/${yourReferralId}`;
 
 const ReferralURL = () => {
   const [isCopied, setIsCopied] = useState(false);

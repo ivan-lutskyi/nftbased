@@ -35,7 +35,7 @@ const socials = [
     icon: <InstagramLogo />,
   },
   {
-    link: 'https://www.facebook.com/nftbased.io',
+    link: 'https://www.facebook.com/nftbased.net',
     icon: <FacebookLogo />,
   },
   {

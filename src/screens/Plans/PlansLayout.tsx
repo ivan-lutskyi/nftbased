@@ -36,9 +36,15 @@ const PlansLayout = ({
     }}
   >
     {currentRoute === AppRoute.PRICING.route ? (
-      <Element style={{ top: window.innerHeight < 700 ? '45px' : '-80px', position: 'absolute' }} name="buyModal" />
+      <Element
+        style={{ top: window.innerHeight < 700 ? '45px' : '-80px', position: 'absolute' }}
+        name="buyModal"
+      />
     ) : currentRoute === AppRoute.HOME.route ? (
-      <Element style={{ top: window.innerHeight < 750 ? '25px' : '-80px', position: 'absolute' }} name="buyModal" />
+      <Element
+        style={{ top: window.innerHeight < 750 ? '25px' : '-80px', position: 'absolute' }}
+        name="buyModal"
+      />
     ) : (
       ''
     )}
@@ -84,8 +90,8 @@ const PlansLayout = ({
     <Text className="plans-footer-title" size="h5" color="#878691">
       * Your tokens will go to your wallet within 20 minutes. If you think there is an error - write
       to
-      <a href="mailto:support@nftbased.io" style={{ color: COLORS.DARK_PURPLE, marginLeft: 5 }}>
-        support@nftbased.io.
+      <a href="mailto:support@nftbased.net" style={{ color: COLORS.DARK_PURPLE, marginLeft: 5 }}>
+        support@nftbased.net
       </a>
     </Text>
   </div>

@@ -2,7 +2,6 @@ import { Profiler, StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider, useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
-import Router from './router';
 import './index.scss';
 import './styles/_shared.scss';
 import './assets/fonts/Gilroy/stylesheet.css';
@@ -10,8 +9,42 @@ import './assets/fonts/Suranna/stylesheet.css';
 import 'normalize.css';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
+import { getStorage, ref } from 'firebase/storage';
+import Router from './router';
+
 import store from './store';
 import { setDeviceType } from './store/actions/core';
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: 'AIzaSyCB6jh0Z2EkUB-f3G1s2d5MlUDdqu1geIM',
+  authDomain: 'nftbased-net.firebaseapp.com',
+  projectId: 'nftbased-net',
+  storageBucket: 'nftbased-net.appspot.com',
+  messagingSenderId: '329698601727',
+  appId: '1:329698601727:web:3d56c4b08a1991fee9faca',
+  measurementId: 'G-T6V42VV6K2',
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// Get a reference to the storage service, which is used to create references in your storage bucket
+const storage = getStorage();
+
+// Create a storage reference from our storage service
+const storageRef = ref(storage);
+const imagesRef = ref(storage, 'gs://nftbased-net.appspot.com/');
+
+export { app, analytics, storage, storageRef, imagesRef };
 
 const App = () => {
   const isCurrentDeviceMobile =
