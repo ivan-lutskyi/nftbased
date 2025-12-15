@@ -67,8 +67,8 @@ const PlansMobileLayout = ({
       <br />
       If you think there is an error - write to
       <br />
-      <a href="mailto:support@nftbased.net" style={{ color: COLORS.DARK_PURPLE, marginLeft: 5 }}>
-        support@nftbased.net
+      <a href="mailto:" style={{ color: COLORS.DARK_PURPLE, marginLeft: 5 }}>
+        support@nftbased
       </a>
     </span>
   </div>

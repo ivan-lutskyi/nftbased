@@ -4,6 +4,12 @@
 
 A full-stack React application for NFT-based musical intellectual property management, featuring user authentication, token management, and a comprehensive marketplace interface.
 
+## 🌐 Live Demo
+
+**👉 [View Live Application](https://nftbased.vercel.app/)**
+
+The application is deployed and accessible at: https://nftbased.vercel.app/
+
 ## 🎯 Key Features
 
 - **Multi-step user registration** with form validation
@@ -57,6 +63,8 @@ src/
 
 ## 🌐 Deployment
 
+**Live URL:** [https://nftbased.vercel.app/](https://nftbased.vercel.app/)
+
 Deployed on Vercel with automatic CI/CD from Git repository.
 
 **Configuration:**
@@ -64,6 +72,7 @@ Deployed on Vercel with automatic CI/CD from Git repository.
 - Node.js 24.x
 - Build: `NODE_OPTIONS=--openssl-legacy-provider npm run build`
 - Output: `build/` directory
+- Platform: Vercel
 
 ## 💡 Technical Highlights
 
@@ -72,13 +81,25 @@ Deployed on Vercel with automatic CI/CD from Git repository.
 - **Responsive design** patterns for mobile/desktop
 - **Form validation** with React Hook Form and Yup schemas
 - **State management** with Redux for complex application state
+- **Error boundaries** for graceful error handling
 - **Code organization** following React best practices
+- **Production-ready** with optimized builds and error handling
 
 ## 📝 Notes
 
 - All API endpoints are mocked (no backend required)
 - Authentication works with any credentials for demo purposes
 - Original project was closed; this is a template copy for portfolio demonstration
+- Error boundaries catch and handle React errors gracefully
+- Console logs removed from production code
+
+## 🎯 Production Features
+
+- **Error Handling**: Error boundaries catch React errors and display user-friendly messages
+- **Performance**: Optimized builds with code splitting and minification
+- **Type Safety**: Full TypeScript coverage for better maintainability
+- **Accessibility**: Semantic HTML and proper ARIA attributes where applicable
+- **Responsive**: Mobile-first design with adaptive layouts
 
 ---
 

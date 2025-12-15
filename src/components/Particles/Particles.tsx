@@ -40,7 +40,6 @@ const Particles: React.FC<ParticlesProps> = ({
       const initParticles = () => {
         // particles.js attaches itself to window.particlesJS
         const particlesJS = (window as any).particlesJS;
-        console.log('Checking particlesJS:', typeof particlesJS, 'retry:', retryCount);
 
         if (particlesJS && typeof particlesJS === 'function') {
           // Ensure container has the correct ID and dimensions
@@ -164,8 +163,6 @@ const Particles: React.FC<ParticlesProps> = ({
               config.particles.line_linked.enable = true;
             }
 
-            console.log('Final config:', JSON.stringify(config, null, 2).substring(0, 500));
-
             try {
               // particles.js expects the canvas to already exist as a DIRECT CHILD
               // It queries for: #uniqueId > .particles-js-canvas-el
@@ -183,7 +180,6 @@ const Particles: React.FC<ParticlesProps> = ({
               ) as HTMLCanvasElement;
 
               if (!canvas) {
-                console.warn('Canvas not found as direct child, creating it');
                 // Create canvas as direct child
                 canvas = document.createElement('canvas');
                 canvas.className = `particles-js-canvas-el ${canvasClassName || ''}`.trim();
@@ -195,20 +191,6 @@ const Particles: React.FC<ParticlesProps> = ({
               // Verify particles.js can find it using the exact query it uses
               const testQuery = document.querySelector(`#${uniqueId} > .particles-js-canvas-el`);
               if (!testQuery) {
-                console.error(
-                  'particles.js query selector test failed:',
-                  `#${uniqueId} > .particles-js-canvas-el`,
-                );
-                console.log('Container ID:', container.id, 'Expected:', uniqueId);
-                console.log('Canvas parent:', canvas.parentElement?.id);
-                console.log(
-                  'All children:',
-                  Array.from(container.children).map((c) => ({
-                    tag: c.tagName,
-                    id: c.id,
-                    className: c.className,
-                  })),
-                );
                 return;
               }
 
@@ -221,55 +203,29 @@ const Particles: React.FC<ParticlesProps> = ({
                 container.style.height = containerHeight + 'px';
               }
 
-              console.log('Initializing particles with:', {
-                id: uniqueId,
-                containerSize: `${containerWidth}x${containerHeight}`,
-                canvasExists: !!canvas,
-                canvasSize: canvas ? `${canvas.offsetWidth}x${canvas.offsetHeight}` : 'N/A',
-                queryTest: !!testQuery,
-              });
-
               // Initialize particles.js
               instanceRef.current = particlesJS(uniqueId, config);
 
               // Check if particles were actually created (with cleanup)
               const checkTimeout = setTimeout(() => {
-                const pJSDom = (window as any).pJSDom;
-                const instance = pJSDom?.find((p: any) => p.pJS?.id === uniqueId);
-                if (instance) {
-                  console.log('Particles instance found:', {
-                    id: uniqueId,
-                    canvas: instance.pJS?.canvas?.el,
-                    particles: instance.pJS?.particles?.array?.length || 0,
-                  });
-                } else {
-                  console.warn('Particles instance not found in pJSDom. pJSDom:', pJSDom);
-                  console.log(
-                    'Available IDs in pJSDom:',
-                    pJSDom?.map((p: any) => p.pJS?.id),
-                  );
-                }
+                // Particles initialized - timeout stored for cleanup
               }, 300);
 
               // Store timeout for cleanup
               if (instanceRef.current) {
                 (instanceRef.current as any)._checkTimeout = checkTimeout;
               }
-
-              console.log('Particles initialized successfully');
             } catch (error) {
-              console.error('Error initializing particles.js:', error);
+              // Silently handle initialization errors in production
+              if (process.env.NODE_ENV === 'development') {
+                console.error('Error initializing particles.js:', error);
+              }
             }
           }
         } else if (retryCount < maxRetries) {
           // Retry after a short delay if particles.js isn't ready
           retryCount++;
           setTimeout(initParticles, 50);
-        } else {
-          console.warn(
-            'particles.js failed to load after maximum retries. window.particlesJS:',
-            typeof (window as any).particlesJS,
-          );
         }
       };
 

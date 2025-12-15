@@ -31,27 +31,27 @@ import { COLORS } from '../../constants/colors';
 
 const socials = [
   {
-    link: 'https://www.instagram.com/nftbased.en/',
+    link: '',
     icon: <InstagramLogo />,
   },
   {
-    link: 'https://www.facebook.com/nftbased.net',
+    link: '',
     icon: <FacebookLogo />,
   },
   {
-    link: 'https://www.linkedin.com/company/nftbased-en/',
+    link: '',
     icon: <LinkedinLogo />,
   },
   {
-    link: 'https://medium.com/nftbased-io',
+    link: '',
     icon: <MediumLogo />,
   },
   {
-    link: 'https://t.me/NFTbased_EN',
+    link: '',
     icon: <TelegramLogo />,
   },
   {
-    link: 'https://twitter.com/nftbased',
+    link: '',
     icon: <TwitterLogo />,
   },
 ];

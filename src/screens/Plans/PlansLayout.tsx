@@ -90,8 +90,8 @@ const PlansLayout = ({
     <Text className="plans-footer-title" size="h5" color="#878691">
       * Your tokens will go to your wallet within 20 minutes. If you think there is an error - write
       to
-      <a href="mailto:support@nftbased.net" style={{ color: COLORS.DARK_PURPLE, marginLeft: 5 }}>
-        support@nftbased.net
+      <a href="mailto:" style={{ color: COLORS.DARK_PURPLE, marginLeft: 5 }}>
+        support@nftbased
       </a>
     </Text>
   </div>

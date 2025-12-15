@@ -66,7 +66,7 @@ const SupportLayout = ({
           </span>
           <span className="input-container-title-mobile">
             <MailImg />
-            <span>support@nftbased.net</span>
+            <span>support@nftbased</span>
           </span>
         </div>
         <form className="support-forms-mobile" onSubmit={handleSubmit(onSubmit)}>

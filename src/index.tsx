@@ -10,7 +10,14 @@ import 'react-toastify/dist/ReactToastify.css';
 // Polyfill for process (needed for some dependencies)
 // Must be defined at the very top before any other code
 (function () {
-  const processPolyfill = { env: { NODE_ENV: 'development' } };
+  const processPolyfill = {
+    env: {
+      NODE_ENV:
+        process?.env?.NODE_ENV ||
+        (typeof window !== 'undefined' && (window as any).process?.env?.NODE_ENV) ||
+        'production',
+    },
+  };
 
   // Set process on all possible global objects
   if (typeof window !== 'undefined') {
@@ -42,42 +49,11 @@ import 'react-toastify/dist/ReactToastify.css';
   }
 })();
 
-// Firebase disabled to prevent network requests
-// import { initializeApp } from 'firebase/app';
-// import { getAnalytics } from 'firebase/analytics';
-// import { getStorage, ref } from 'firebase/storage';
+// Firebase disabled - portfolio template (no backend required)
 import Router from './router';
-
+import ErrorBoundary from './components/ErrorBoundary';
 import store from './store';
 import { setDeviceType } from './store/actions/core';
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Firebase configuration removed for security
-// This is a portfolio template - Firebase is disabled
-// const firebaseConfig = {
-//   apiKey: 'YOUR_API_KEY_HERE',
-//   authDomain: 'your-project.firebaseapp.com',
-//   projectId: 'your-project-id',
-//   storageBucket: 'your-project.appspot.com',
-//   messagingSenderId: '123456789',
-//   appId: '1:123456789:web:abcdef',
-//   measurementId: 'G-XXXXXXXXXX',
-// };
-
-// Initialize Firebase - DISABLED
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-
-// Get a reference to the storage service, which is used to create references in your storage bucket
-// const storage = getStorage();
-
-// Create a storage reference from our storage service
-// const storageRef = ref(storage);
-// const imagesRef = ref(storage, 'gs://nftbased-net.appspot.com/');
-
-// export { app, analytics, storage, storageRef, imagesRef };
 
 const App = () => {
   const isCurrentDeviceMobile =
@@ -111,7 +87,9 @@ const App = () => {
 import ReactDOM from 'react-dom';
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </Provider>,
   document.getElementById('root'),
 );

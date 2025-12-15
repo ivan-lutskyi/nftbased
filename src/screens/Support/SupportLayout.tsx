@@ -63,7 +63,7 @@ const SupportLayout = ({
       <div className="support-footer">
         <span className="input-container-title">
           <MailImg />
-          <span>support@nftbased.net (disabled)</span>
+          <span>support@nftbased (disabled)</span>
         </span>
         <span className="input-container-title">
           <PhoneImg />

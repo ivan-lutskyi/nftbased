@@ -1,7 +1,7 @@
 {
   "name": "nftbased",
   "version": "0.2.0",
-  "homepage": "http://nftbased.net",
+  "homepage": "https://nftbased.vercel.app/",
   "engines": {
     "node": "24.x"
   },

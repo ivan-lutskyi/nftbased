@@ -8,7 +8,7 @@ export default () => {
   const currentFrame = () => {
     if (i >= frameCount) {
       i = 0;
-      console.log(i);
+      // Animation loop
       return `/auto_animation_figures/FIGURE_4_0000${0}.png`;
     }
     i += 1;
