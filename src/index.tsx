@@ -54,17 +54,17 @@ import { setDeviceType } from './store/actions/core';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: 'AIzaSyCB6jh0Z2EkUB-f3G1s2d5MlUDdqu1geIM',
-  authDomain: 'nftbased-net.firebaseapp.com',
-  projectId: 'nftbased-net',
-  storageBucket: 'nftbased-net.appspot.com',
-  messagingSenderId: '329698601727',
-  appId: '1:329698601727:web:3d56c4b08a1991fee9faca',
-  measurementId: 'G-T6V42VV6K2',
-};
+// Firebase configuration removed for security
+// This is a portfolio template - Firebase is disabled
+// const firebaseConfig = {
+//   apiKey: 'YOUR_API_KEY_HERE',
+//   authDomain: 'your-project.firebaseapp.com',
+//   projectId: 'your-project-id',
+//   storageBucket: 'your-project.appspot.com',
+//   messagingSenderId: '123456789',
+//   appId: '1:123456789:web:abcdef',
+//   measurementId: 'G-XXXXXXXXXX',
+// };
 
 // Initialize Firebase - DISABLED
 // const app = initializeApp(firebaseConfig);

@@ -20,8 +20,9 @@ export type PhoneNumberValidationResponse = {
     | 'paging';
 };
 
-const getNumerifyValidateUrl = (number: string) =>
-  `https://apilayer.net/api/validate?access_key=${process.env.REACT_APP_NUMERIFY_API_KEY}&number=${number}`;
+// API key removed for security - service is mocked
+// const getNumerifyValidateUrl = (number: string) =>
+//   `https://apilayer.net/api/validate?access_key=${process.env.REACT_APP_NUMERIFY_API_KEY}&number=${number}`;
 
 // Network requests disabled - returns mock response
 export const validatePhoneNumber = async (
