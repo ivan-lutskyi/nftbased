@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "homepage": "http://nftbased.net",
   "engines": {
-    "node": "16.x"
+    "node": "24.x"
   },
   "private": true,
   "dependencies": {
