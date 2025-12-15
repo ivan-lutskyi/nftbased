@@ -1,4 +1,4 @@
-import Particles from 'react-particles-js';
+import Particles from '../../components/Particles/Particles';
 import { particlesParams } from '../../constants/particlesParams';
 import InvitedUsers from './components/InvitedUsers';
 import QrWallet from './components/QrWallet';

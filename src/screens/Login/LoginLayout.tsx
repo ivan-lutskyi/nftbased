@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
-import Particles from 'react-particles-js';
 import { AppRoute } from '../../constants/routes';
 import FormInput from '../../components/FormInput';
 import { useTranslation } from '../../hooks/translation';
-import { particlesParams } from '../../constants/particlesParams';
 import Loader from '../../components/Loader';
 import { ReactComponent as CancelIcon } from './img/cancel-icon.svg';
 
@@ -30,7 +28,18 @@ const LoginLayout = ({ onSubmit, register, handleSubmit, errors, isLoading }: IP
 
   return (
     <>
-      <Particles params={particlesParams} canvasClassName="login-particles" />
+      <div
+        className="login-particles"
+        style={{
+          position: 'fixed',
+          zIndex: -1,
+          top: 0,
+          right: 0,
+          width: '50vw',
+          height: '100vh',
+          backgroundColor: 'rgb(9, 11, 47)',
+        }}
+      />
 
       <div className="login-container">
         <div className="login-block">
@@ -42,6 +51,22 @@ const LoginLayout = ({ onSubmit, register, handleSubmit, errors, isLoading }: IP
             <Link to={AppRoute.HOME.route}>
               <CancelIcon width={20} height={20} />
             </Link>
+          </div>
+
+          {/* Portfolio Notice */}
+          <div
+            style={{
+              backgroundColor: '#fff3cd',
+              border: '1px solid #ffc107',
+              borderRadius: '8px',
+              padding: '12px',
+              marginBottom: '20px',
+              fontSize: '12px',
+              color: '#856404',
+            }}
+          >
+            <strong>Portfolio Demo:</strong> This is a template copy of a closed project. Login
+            works with any email and password to demonstrate the interface.
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className="login-form">

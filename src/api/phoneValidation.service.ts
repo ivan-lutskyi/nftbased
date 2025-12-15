@@ -23,8 +23,20 @@ export type PhoneNumberValidationResponse = {
 const getNumerifyValidateUrl = (number: string) =>
   `https://apilayer.net/api/validate?access_key=${process.env.REACT_APP_NUMERIFY_API_KEY}&number=${number}`;
 
-export const validatePhoneNumber = async (number: string) => {
-  const response = await api.post<PhoneNumberValidationResponse>(getNumerifyValidateUrl(number));
-  const responseData = response.data;
-  return responseData;
+// Network requests disabled - returns mock response
+export const validatePhoneNumber = async (
+  number: string,
+): Promise<PhoneNumberValidationResponse> => {
+  return Promise.resolve({
+    valid: true,
+    number: number,
+    local_format: number,
+    international_format: number,
+    country_prefix: '+1',
+    country_code: 'US',
+    country_name: 'United States',
+    location: 'Unknown',
+    carrier: 'Unknown',
+    line_type: 'mobile',
+  });
 };

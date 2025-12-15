@@ -2,7 +2,7 @@ import { UseFormRegisterReturn } from 'react-hook-form';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Select from 'react-select/src/Select';
-import Particles from 'react-particles-js';
+import Particles from '../../components/Particles/Particles';
 import { ToastContainer } from 'react-toastify';
 import { ReactComponent as DropdownIcon } from '../../assets/img/dropdownIcon.svg';
 import FormInput from '../../components/FormInput';

@@ -1,5 +1,3 @@
-import { Profiler, StrictMode } from 'react';
-import ReactDOM from 'react-dom';
 import { Provider, useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import './index.scss';
@@ -9,10 +7,45 @@ import './assets/fonts/Suranna/stylesheet.css';
 import 'normalize.css';
 import 'react-toastify/dist/ReactToastify.css';
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
-import { getStorage, ref } from 'firebase/storage';
+// Polyfill for process (needed for some dependencies)
+// Must be defined at the very top before any other code
+(function () {
+  const processPolyfill = { env: { NODE_ENV: 'development' } };
+
+  // Set process on all possible global objects
+  if (typeof window !== 'undefined') {
+    (window as any).process = processPolyfill;
+  }
+  if (typeof globalThis !== 'undefined') {
+    (globalThis as any).process = processPolyfill;
+  }
+  if (typeof global !== 'undefined') {
+    (global as any).process = processPolyfill;
+  }
+  // Also set it directly on the global object using Function constructor
+  try {
+    const globalObj = Function('return this')();
+    if (globalObj) {
+      (globalObj as any).process = processPolyfill;
+    }
+  } catch (e) {
+    // Fallback if Function constructor is blocked
+  }
+
+  // Define process as a global variable (for webpack/bundler access)
+  if (typeof globalThis !== 'undefined') {
+    Object.defineProperty(globalThis, 'process', {
+      value: processPolyfill,
+      writable: true,
+      configurable: true,
+    });
+  }
+})();
+
+// Firebase disabled to prevent network requests
+// import { initializeApp } from 'firebase/app';
+// import { getAnalytics } from 'firebase/analytics';
+// import { getStorage, ref } from 'firebase/storage';
 import Router from './router';
 
 import store from './store';
@@ -33,18 +66,18 @@ const firebaseConfig = {
   measurementId: 'G-T6V42VV6K2',
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// Initialize Firebase - DISABLED
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
 // Get a reference to the storage service, which is used to create references in your storage bucket
-const storage = getStorage();
+// const storage = getStorage();
 
 // Create a storage reference from our storage service
-const storageRef = ref(storage);
-const imagesRef = ref(storage, 'gs://nftbased-net.appspot.com/');
+// const storageRef = ref(storage);
+// const imagesRef = ref(storage, 'gs://nftbased-net.appspot.com/');
 
-export { app, analytics, storage, storageRef, imagesRef };
+// export { app, analytics, storage, storageRef, imagesRef };
 
 const App = () => {
   const isCurrentDeviceMobile =
@@ -75,13 +108,10 @@ const App = () => {
   );
 };
 
+import ReactDOM from 'react-dom';
 ReactDOM.render(
-  <StrictMode>
-    <Profiler id="MyComponent" onRender={() => {}}>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </Profiler>
-  </StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root'),
 );

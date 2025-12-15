@@ -1,10 +1,9 @@
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import Particles from 'react-particles-js';
+import { COLORS } from '../../../constants/colors';
 import { AppRoute } from '../../../constants/routes';
 import FormInput from '../../../components/FormInput';
 import { useTranslation } from '../../../hooks/translation';
-import { particlesParams } from '../../../constants/particlesParams';
 import Loader from '../../../components/Loader';
 import {
   getMaxLengthMessage,
@@ -13,7 +12,6 @@ import {
   REQUIRED_FIELD_MESSAGE,
 } from '../../../constants/messages';
 import Text from '../../../components/Text';
-import { COLORS } from '../../../constants/colors';
 
 interface IProps {
   onSubmit: (data: any) => void;

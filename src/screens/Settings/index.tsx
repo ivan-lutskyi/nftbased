@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Particles from 'react-particles-js';
+import Particles from '../../components/Particles/Particles';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/translation';

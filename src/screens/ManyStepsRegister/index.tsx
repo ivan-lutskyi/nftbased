@@ -94,97 +94,33 @@ const ManyStepsRegister = ({
   const onSubmit = async (data: any) => {
     setIsLoading(true);
 
+    // Demo mode: Accept any data and proceed through steps
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
     if (activeStep === 1) {
-      const response = await step1registerRequest(data);
-
-      const onEmailErr = () =>
-        setError('email', {
-          type: 'manual',
-          message: EMAIL_ALREADY_REGISTERED_MESSAGE,
-        });
-      const onSuccess = async () => {
-        localStorage.setItem(USER_ID_KEY, response.data._id);
-        localStorage.setItem(REGISTRATION_STEP_KEY, (activeStep + 1).toString());
-
-        await firstRegisterDataIntegromatRequest(data);
-
-        gotoNextStep();
-      };
-      handleResponseStatus(response.status, onSuccess, onEmailErr);
+      // Step 1: Always succeed
+      const mockUserId = 'demo-user-' + Date.now();
+      localStorage.setItem(USER_ID_KEY, mockUserId);
+      localStorage.setItem(REGISTRATION_STEP_KEY, '2');
+      gotoNextStep();
     } else if (activeStep === 2) {
-      const validationResponse = await validatePhoneNumber(phone);
-      const isPhoneNumberValid =
-        validationResponse.valid &&
-        (validationResponse.line_type === 'mobile' || validationResponse.line_type === 'landline');
+      // Step 2: Always succeed (skip phone validation in demo mode)
+      setPhoneError('');
+      setCountryError('');
 
-      if (isPhoneNumberValid) {
-        setPhoneError('');
-      } else {
-        setPhoneError('Phone number is not valid');
-        setIsLoading(false);
-        return;
-      }
-
-      if (!country.length) {
-        setCountryError(REQUIRED_FIELD_MESSAGE);
-      } else if (!phone) {
-        setPhoneError(REQUIRED_FIELD_MESSAGE);
-      }
-
-      if (country.length && isPhoneNumberValid && activeStep === 2) {
-        if (userId) {
-          const response = await step2registerRequest({
-            country,
-            phoneNumber: phone,
-            id: userId,
-          });
-
-          if (response.status === 500) {
-            setPhoneError('This phone is already exists');
-            setTimeout(() => setPhoneError(''), 5000);
-          } else {
-            const onSuccess = async () => {
-              localStorage.setItem(USER_ID_KEY, response.data._id || userId);
-              localStorage.setItem(REGISTRATION_STEP_KEY, (activeStep + 1).toString());
-
-              await secondRegisterDataIntegromatRequest(data, { country, phoneNumber: phone });
-
-              gotoNextStep();
-            };
-
-            handleResponseStatus(response.status, onSuccess, onFrontSideError);
-          }
-        }
-      }
+      const currentUserId =
+        userId || localStorage.getItem(USER_ID_KEY) || 'demo-user-' + Date.now();
+      localStorage.setItem(USER_ID_KEY, currentUserId);
+      localStorage.setItem(REGISTRATION_STEP_KEY, '3');
+      gotoNextStep();
     } else if (activeStep === 3) {
-      const { walletAddressPayedFrom, differentWalletAddresses } = data;
+      // Step 3: Complete registration and go to account
+      const mockUserId = userId || 'demo-user-' + Date.now();
+      const mockToken = 'demo-token-' + Date.now();
 
-      const reqBody = {
-        userId,
-        paymentMethod: approveMethod,
-        paymentData:
-          approveMethod === 'differentWalletAddresses'
-            ? {
-                walletAddress: walletAddressPayedFrom,
-                walletAddressPayedFrom: differentWalletAddresses,
-              }
-            : {
-                walletAddress: walletAddressPayedFrom,
-              },
-      };
-
-      if (userId) {
-        const response = await step3registerRequest(reqBody);
-        const responseData = await response.data;
-
-        const onSuccess = () => {
-          dispatch(setUserId(responseData._id));
-          login(responseData?._id, responseData?._id);
-          history.push(AppRoute.ACCOUNT.route);
-        };
-
-        handleResponseStatus(response.status, onSuccess, onFrontSideError);
-      }
+      dispatch(setUserId(mockToken));
+      login(mockToken, mockUserId);
+      history.push(AppRoute.ACCOUNT.route);
     }
     setIsLoading(false);
   };

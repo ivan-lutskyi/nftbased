@@ -31,47 +31,18 @@ const Login = () => {
   const onSubmit = async (data: any) => {
     setIsLoading(true);
 
-    const response = await loginRequest(data);
+    // Demo mode: Accept any credentials and proceed to account page
+    // Simulate a short delay for better UX
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
-    if (response.status === StatusCodes.OK) {
-      const responseData = await response.data;
+    // Always succeed with mock data
+    const mockUserId = 'demo-user-' + Date.now();
+    const mockToken = 'demo-token-' + Date.now();
 
-      if (responseData.tokens.accessToken) {
-        if (responseData.step === 'complete') {
-          dispatch(setUserId(responseData.tokens.accessToken));
-          login(responseData?.tokens?.accessToken, responseData?.userId);
+    dispatch(setUserId(mockToken));
+    login(mockToken, mockUserId);
+    history.push(AppRoute.ACCOUNT.route);
 
-          history.push(AppRoute.ACCOUNT.route);
-        } else if (responseData.step === 'step2') {
-          history.push({
-            pathname: AppRoute.REGISTER.route,
-            state: { step: stepByResponseString.step2, userId: responseData.userId },
-          });
-        } else if (responseData.step === 'step3') {
-          history.push({
-            pathname: AppRoute.REGISTER.route,
-            state: { step: stepByResponseString.step3, userId: responseData.userId },
-          });
-          // history.push(AppRoute.REGISTER.route, { step: responseData.step });
-        }
-
-        // dispatch(setUserId(responseData.tokens.accessToken));
-        // history.push(AppRoute.ACCOUNT.route);
-        // login(responseData.tokens.accessToken,
-        //   responseData.tokens.accessToken);
-      }
-    } else if (
-      response.status === StatusCodes.BAD_REQUEST ||
-      response.status === StatusCodes.UNAUTHORIZED ||
-      response.status === StatusCodes.FORBIDDEN
-    ) {
-      setError('email', {
-        type: 'manual',
-        message: 'Incorrect email or password!',
-      });
-    } else {
-      toast(SERVER_ERROR_MESSAGE);
-    }
     setIsLoading(false);
   };
 

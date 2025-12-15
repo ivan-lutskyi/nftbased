@@ -1,11 +1,17 @@
-const cryptoURL = 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD';
-
+// Network requests disabled - returning mock response
 export const getETHToUSDCurrency = async () => {
-  const response = await fetch(cryptoURL, {
-    method: 'GET',
-    headers: {
-      'Content-type': 'application/json',
-    },
-  });
-  return response;
+  // Return a mock Response-like object
+  return {
+    ok: true,
+    status: 200,
+    json: async () => ({
+      ok: true,
+      Data: {
+        Data: [
+          { close: 0 },
+          { close: 2500 }, // Mock ETH price
+        ],
+      },
+    }),
+  } as Response;
 };

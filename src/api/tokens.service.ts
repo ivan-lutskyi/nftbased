@@ -3,8 +3,14 @@ import api from './xhr';
 
 const TOKEN_DATA_URL = '/app/chart';
 
+// Network requests disabled - returns mock response
 export const tokenDataRequest = (range: string) =>
-  api
-    .get(`${TOKEN_DATA_URL}/?range=${range}`)
-    .then((value: AxiosResponse) => ({ status: value.status, response: value.data }))
-    .catch((error: AxiosError) => ({ status: 400, response: error.response?.data }));
+  Promise.resolve({
+    status: 200,
+    response: {
+      data: [
+        { time: Date.now() - 86400000, value: 100 },
+        { time: Date.now(), value: 105 },
+      ],
+    },
+  });

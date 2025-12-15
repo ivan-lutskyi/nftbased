@@ -1,7 +1,6 @@
 import { useState, useEffect, CSSProperties } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Lottie from 'react-lottie';
 import animationData from '../../assets/coreLoaderAnimation.json';
 import { ReactComponent as Logo } from '../../assets/img/appLogo/logo.svg';
 import { COLORS } from '../../constants/colors';
@@ -18,7 +17,6 @@ const defaultLootieOptions = {
 };
 
 const CoreLoader = () => {
-
   const styles: Record<
     'coreLoaderContainer' | 'coreLoaderAnimation' | 'coreLoaderLogo',
     CSSProperties
@@ -54,11 +52,6 @@ const CoreLoader = () => {
   return (
     <div className="core-loader" style={styles.coreLoaderContainer}>
       <Logo style={styles.coreLoaderLogo} />
-      <Lottie
-        options={defaultLootieOptions}
-        style={styles.coreLoaderAnimation}
-        isClickToPauseDisabled
-      />
     </div>
   );
 };

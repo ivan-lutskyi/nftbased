@@ -128,6 +128,22 @@ const ManyStepsRegisterLayout = ({
               flexDirection: 'column',
             }}
           >
+            {/* Portfolio Notice */}
+            <div
+              style={{
+                backgroundColor: '#fff3cd',
+                border: '1px solid #ffc107',
+                borderRadius: '8px',
+                padding: '12px',
+                marginBottom: '20px',
+                fontSize: '11px',
+                color: '#856404',
+              }}
+            >
+              <strong>Portfolio Demo:</strong> This is a template copy of a closed project.
+              Registration works with any data to demonstrate the interface.
+            </div>
+
             <div className="many-steps-register-title-container">
               <span className="login-title-mobile">Purchase</span>
 
@@ -168,6 +184,22 @@ const ManyStepsRegisterLayout = ({
           }
         >
           <div className="login-block-mobile">
+            {/* Portfolio Notice */}
+            <div
+              style={{
+                backgroundColor: '#fff3cd',
+                border: '1px solid #ffc107',
+                borderRadius: '8px',
+                padding: '12px',
+                marginBottom: '20px',
+                fontSize: '11px',
+                color: '#856404',
+              }}
+            >
+              <strong>Portfolio Demo:</strong> This is a template copy of a closed project.
+              Registration works with any data to demonstrate the interface.
+            </div>
+
             <div className="login-title-container">
               <div className="many-steps-register-title-container">
                 <Text size="h3" bold className="login-title-mobile">

@@ -1,4 +1,4 @@
-import { Parallax } from 'react-parallax';
+// import { Parallax } from 'react-parallax';
 import './style.css';
 import { useSelector } from 'react-redux';
 import bg1path from '../../img/bg-1.png';
@@ -24,7 +24,7 @@ const GetStartedParallaxBg = () => {
   return (
     <div className="parallax-bg-container">
       <img src={bg1path} alt="" className="parallax-bg-static-bg" />
-      {imagesData.map(({ path, strength }) => (
+      {/* {imagesData.map(({ path, strength }) => (
         <Parallax
           key={generateId()}
           blur={0}
@@ -43,7 +43,7 @@ const GetStartedParallaxBg = () => {
             height: document.body.offsetHeight,
           }}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

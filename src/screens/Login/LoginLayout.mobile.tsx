@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import { AppRoute } from '../../constants/routes';
 import FormInput from '../../components/FormInput';
 import { useTranslation } from '../../hooks/translation';
@@ -39,6 +38,22 @@ const LoginMobileLayout = ({ onSubmit, register, handleSubmit, errors, isLoading
             <Link to={AppRoute.HOME.route}>
               <CancelIcon width={20} height={20} />
             </Link>
+          </div>
+
+          {/* Portfolio Notice */}
+          <div
+            style={{
+              backgroundColor: '#fff3cd',
+              border: '1px solid #ffc107',
+              borderRadius: '8px',
+              padding: '12px',
+              marginBottom: '20px',
+              fontSize: '11px',
+              color: '#856404',
+            }}
+          >
+            <strong>Portfolio Demo:</strong> This is a template copy of a closed project. Login
+            works with any email and password to demonstrate the interface.
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className="login-form-mobile">

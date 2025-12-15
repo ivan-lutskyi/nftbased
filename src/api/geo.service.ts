@@ -3,14 +3,13 @@ import api from './xhr';
 
 const GEO_API_URL = 'https://ipapi.co/json/';
 
+// Network requests disabled - returns mock response
 export const getGeoRequest = () =>
-  api
-    .get(GEO_API_URL)
-    .then((value: AxiosResponse) => ({
-      status: value.status,
-      response: value.data,
-    }))
-    .catch((error: AxiosError) => ({
-      status: 400,
-      response: error.response?.data,
-    }));
+  Promise.resolve({
+    status: 200,
+    response: {
+      country_name: 'United States',
+      country_code: 'US',
+      city: 'New York',
+    },
+  });

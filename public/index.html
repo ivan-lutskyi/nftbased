@@ -28,6 +28,41 @@
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      // Process polyfill - must run before any other scripts
+      (function () {
+        if (typeof process === 'undefined') {
+          var processPolyfill = { env: { NODE_ENV: 'development' } };
+
+          // Set on window
+          if (typeof window !== 'undefined') {
+            window.process = processPolyfill;
+          }
+
+          // Set on globalThis
+          if (typeof globalThis !== 'undefined') {
+            globalThis.process = processPolyfill;
+          }
+
+          // Set on global
+          if (typeof global !== 'undefined') {
+            global.process = processPolyfill;
+          }
+
+          // Define as non-configurable property for webpack/bundler access
+          try {
+            Object.defineProperty(globalThis, 'process', {
+              value: processPolyfill,
+              writable: true,
+              configurable: true,
+              enumerable: false,
+            });
+          } catch (e) {
+            // Fallback
+          }
+        }
+      })();
+    </script>
     <div id="root"></div>
   </body>
 </html>

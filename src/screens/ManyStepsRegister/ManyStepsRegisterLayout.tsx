@@ -1,14 +1,12 @@
 import { ToastContainer } from 'react-toastify';
-import Particles from 'react-particles-js';
-import { particlesParams } from '../../constants/particlesParams';
 import './style.scss';
+import { COLORS } from '../../constants/colors';
 import FirstRegisterForm from './components/FirstRegisterForm';
 import SecondRegisterForm from './components/SecondRegisterForm';
 import ThirdRegisterForm from './components/ThirdRegisterForm';
 import { APPROVE_METHODS } from '.';
 import { plans } from '../../constants/plans';
 import Text from '../../components/Text';
-import { COLORS } from '../../constants/colors';
 
 interface IProps {
   onSubmit: (data: any) => void;
@@ -115,7 +113,18 @@ const ManyStepsRegisterLayout = ({
             alignItems: 'center',
           }}
         >
-          <Particles params={particlesParams} canvasClassName="login-particles" />
+          <div
+            className="login-particles"
+            style={{
+              position: 'fixed',
+              zIndex: -1,
+              top: 0,
+              right: 0,
+              width: '50vw',
+              height: '100vh',
+              backgroundColor: 'rgb(9, 11, 47)',
+            }}
+          />
 
           <div
             style={{
@@ -128,6 +137,22 @@ const ManyStepsRegisterLayout = ({
               flexDirection: 'column',
             }}
           >
+            {/* Portfolio Notice */}
+            <div
+              style={{
+                backgroundColor: '#fff3cd',
+                border: '1px solid #ffc107',
+                borderRadius: '8px',
+                padding: '12px',
+                marginBottom: '20px',
+                fontSize: '12px',
+                color: '#856404',
+              }}
+            >
+              <strong>Portfolio Demo:</strong> This is a template copy of a closed project.
+              Registration works with any data to demonstrate the interface.
+            </div>
+
             <div className="many-steps-register-title-container">
               <Text className="login-title" size="h3">
                 Purchase
@@ -169,9 +194,36 @@ const ManyStepsRegisterLayout = ({
               : {}
           }
         >
-          <Particles params={particlesParams} canvasClassName="login-particles" />
+          <div
+            className="login-particles"
+            style={{
+              position: 'fixed',
+              zIndex: -1,
+              top: 0,
+              right: 0,
+              width: '50vw',
+              height: '100vh',
+              backgroundColor: 'rgb(9, 11, 47)',
+            }}
+          />
 
           <div className="login-block">
+            {/* Portfolio Notice */}
+            <div
+              style={{
+                backgroundColor: '#fff3cd',
+                border: '1px solid #ffc107',
+                borderRadius: '8px',
+                padding: '12px',
+                marginBottom: '20px',
+                fontSize: '12px',
+                color: '#856404',
+              }}
+            >
+              <strong>Portfolio Demo:</strong> This is a template copy of a closed project.
+              Registration works with any data to demonstrate the interface.
+            </div>
+
             <div className="login-title-container">
               <div className="many-steps-register-title-container">
                 <Text className="login-title" size="h3" bold>

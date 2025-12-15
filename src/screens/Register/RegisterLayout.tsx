@@ -2,7 +2,6 @@ import Select from 'react-select/src/Select';
 import { UseFormRegisterReturn } from 'react-hook-form';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Particles from 'react-particles-js';
 import { ToastContainer } from 'react-toastify';
 import { Grid } from '@material-ui/core';
 import FormInput from '../../components/FormInput';
@@ -11,8 +10,8 @@ import { generateId } from '../../utils';
 import countries from '../../constants/countries';
 import { useTranslation } from '../../hooks/translation';
 import { AppRoute } from '../../constants/routes';
-import { particlesParams } from '../../constants/particlesParams';
 import { ReactComponent as CancelIcon } from '../Login/img/cancel-icon.svg';
+import { COLORS } from '../../constants/colors';
 
 interface IProps {
   onSubmit: () => void;
@@ -62,7 +61,18 @@ const RegisterLayout = ({
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Particles params={particlesParams} className="register-particles" />
+      <div
+        className="register-particles"
+        style={{
+          position: 'fixed',
+          zIndex: -1,
+          top: 0,
+          right: 0,
+          width: '50vw',
+          height: '100vh',
+          backgroundColor: 'rgb(9, 11, 47)',
+        }}
+      />
       <div className="register-block">
         <div className="login-title-container">
           <span className="register-title">Create an account</span>
