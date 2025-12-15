@@ -1,19 +1,13 @@
 {
-  "version": 2,
+  "framework": "create-react-app",
   "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
   "outputDirectory": "build",
   "installCommand": "npm install --legacy-peer-deps",
-  "framework": null,
+  "devCommand": "NODE_OPTIONS=--openssl-legacy-provider npm start",
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "env": {
-    "NODE_OPTIONS": "--openssl-legacy-provider"
-  },
-  "functions": {},
-  "crons": []
+  ]
 }
-

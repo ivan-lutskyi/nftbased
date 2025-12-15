@@ -18,6 +18,7 @@ This project is configured to deploy on Vercel. Follow these steps:
 2. Go to [vercel.com/new](https://vercel.com/new)
 3. Import your Git repository
 4. Vercel will auto-detect the settings:
+
    - **Framework Preset**: Other (or Create React App)
    - **Build Command**: `NODE_OPTIONS=--openssl-legacy-provider npm run build`
    - **Output Directory**: `build`
@@ -29,16 +30,19 @@ This project is configured to deploy on Vercel. Follow these steps:
 ### Method 2: Deploy via Vercel CLI
 
 1. Install Vercel CLI:
+
    ```bash
    npm i -g vercel
    ```
 
 2. Login to Vercel:
+
    ```bash
    vercel login
    ```
 
 3. Deploy:
+
    ```bash
    vercel
    ```
@@ -72,14 +76,17 @@ The project uses Node.js 16.x (specified in `package.json` engines field and `.n
 ## Troubleshooting
 
 ### Build Fails with OpenSSL Error
+
 - The `NODE_OPTIONS=--openssl-legacy-provider` flag is already configured in `vercel.json`
 - If issues persist, check that Vercel is using Node.js 16.x
 
 ### Build Fails with Peer Dependency Errors
+
 - The `--legacy-peer-deps` flag is configured in the install command
 - This should resolve most peer dependency conflicts
 
 ### Routes Not Working (404 errors)
+
 - The `vercel.json` includes rewrites to redirect all routes to `index.html`
 - This ensures React Router works correctly
 
@@ -88,7 +95,7 @@ The project uses Node.js 16.x (specified in `package.json` engines field and `.n
 Once deployed, you'll get a URL like: `https://your-project.vercel.app`
 
 You can:
+
 - Set up a custom domain in Vercel project settings
 - Configure automatic deployments from your Git repository
 - Set up preview deployments for pull requests
-
